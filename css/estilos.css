@@ -1,0 +1,89 @@
+*{
+    font-family: Arial;
+}
+
+h2{
+    color: purple;
+}
+
+p{
+    line-height: 1.6;
+}
+
+.destacado{
+    font-weight: 700;
+}
+
+#encabezado{
+    background-color: blue;
+}
+/*Tipo de selector: Descendiente
+Elementos que selecciona: todos los enlaces dentro de nav
+Porque se utilizó este selector: para dar estilo al menú de navegación*/
+nav a{
+    color: #17365d;
+}
+/*Tipo de selector: Hijo directo
+Elementos que selecciona: Los párrafos que son hijos de un elemento <article>
+Porque se utilizó este selector: Para asegurar que solo se aplique a párrafos dentro de article*/
+article > p{
+    color: #2f5597;
+}
+/*Tipo de selector: Hermano adyacente
+Elementos que selecciona: El primer párrafo después del h2
+Porque se utilizó este selector: Para modificar el párrafo que está justo después del h2*/
+h2 + p{
+    color: salmon;
+}
+/*Tipo de selector: Hermano
+Elementos que selecciona: Todos los p que comparten padre con h2
+Porque se utilizó este selector: Para seleccionar todos los párrafos después del h2
+*/
+h2 ~ p{
+    color: yellow;
+}
+/*Tipo de selector: Pseudoclases
+Elementos que selecciona: Todos los elementos que tengan el atributo deshabilitado
+Porque se utilizó este selector: Para cambiar la apariencia de un botón no disponible
+*/
+[disabled]{
+    opacity: 0.5;
+}
+/*Tipo de selector: Atributo con valor
+Elementos que selecciona: Los campus <input> cuyo atributo type sea email
+Porque se utilizó este selector:
+*/
+input[type="email"]{
+ border-color: steelblue;
+}
+
+a:hover {
+    text-decoration-thickness: 3px;
+}
+/*Tipo de selector: Pseudoclase
+Elementos que selecciona: Selecciona los elementos <input> para que el teclado o mouse sea interactivo con la página
+Porque se utilizó este selector: Para resaltar visualmente un campo y mejora accesibilidad
+*/
+input:focus{
+    border-color: #1572b6;
+}
+
+button:disabled {
+    opacity: .55;
+}
+
+li:nth-child(odd){
+    background: greenyellow;
+}
+
+p::first-letter{
+    font-size: 32px;
+}
+/*Tipo de selector: Pseudoelemento
+Elementos que selecciona: Un elemento antes del contenido con la clase .importante
+Porque se utilizó este selector: Para agregar texto decorativo antes del contenido sin tocar HTML
+*/
+.importante::before{
+    content:"Aviso: ";
+    font-weight: 700;
+}
